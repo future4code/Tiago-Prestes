@@ -20,7 +20,7 @@ console.log(`O e-mail ${userEmail} foi cadastrado com sucesso ${userName}`)*/
 
 
 //2.
-/*
+
 //a.
 const food = [
     ` panqueca`,
@@ -29,7 +29,7 @@ const food = [
     ` pão`,
     ` churrasco`
 ]
-//console.log(food)
+console.log(food)
 
 //b.
 console.log(` 
@@ -49,7 +49,7 @@ console.log(food)
 */
 
 //3.
-/*
+
 //a.
 const listaDeTarefas = []
 
