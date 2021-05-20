@@ -31,7 +31,7 @@ img {
 
 div>p {
     display: block;
-    
+
 }
 
 div img {
@@ -54,6 +54,7 @@ div img {
 .container {
     height: 500px;
     text-align: center;
+    padding: ;
 }
 
 .icone {
@@ -70,10 +71,12 @@ div img {
 #container-de-descricao {
     background-color: #2274a5;
     color: white;
+    padding-top: 200px;
 }
 
 #container-de-descricao>ol {
     padding: 15px 0px;
+    list-style-position: inherit; 
 }
 
 #container-para-comprar {
