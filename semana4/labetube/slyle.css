@@ -12,10 +12,14 @@ body {
 
 header {
     display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
     background-color: orangered;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 34px 16px 34px;
+    padding: 15px;
 }
 
 main {
@@ -24,7 +28,7 @@ main {
     row-gap: 22px;
     column-gap: 22px;
     justify-content: space-between;
-    padding: 20px;
+    margin: 20px;
 }
 
 img {
@@ -42,17 +46,56 @@ img {
 }
 
 footer {
-    display: flex;
+    display: block;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    text-align: center;
     background-color: orangered;
     justify-content: center;
-    align-items: center;
-    grid-column: 1/-1;
+    padding: 10px;
 }
 
 .box-video {
+
+}
+
+.box-video video {
+    width: 720px; 
+    height:480px;
+}
+
+.video-main {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* padding-top: 50px; */
-    justify-content: space-evenly;
+    justify-content: center;
+}
+
+
+@media screen and (min-device-width: 320px) and (max-device-width: 480px){/* celulares */
+    
+    main {
+        grid-template-columns: 1fr;
+        width: 100%; 
+    }
+
+    .box-video video {
+        width: 35%;
+        height: 35%;
+        margin-top: 150px;
+    }
+
+    .video-main .box-video {
+        display: flex;
+        justify-content: center;
+    }
+
+    footer {
+        position: fixed;
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+    }
 }
