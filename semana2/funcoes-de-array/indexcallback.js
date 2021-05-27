@@ -27,12 +27,12 @@ const pets = [
     { nome: "Caramelo", raca: "Vira-lata"},
  ]
 
-//a.
+a.
 
-// const listaNomes = pets.map((bicho) => {
-//     return bicho.raca
-// })
-// console.log(listaNomes)
+const listaNomes = pets.map((bicho) => {
+    return bicho.raca
+})
+console.log(listaNomes)
 
 //b.
 
