@@ -16,7 +16,6 @@ ul {
     position: fixed;
     top: 0;
     width: 100%;
-    justify-content: space-between;
 }
 
 li {
@@ -101,5 +100,10 @@ video {
     .grid-container {
         grid-template-columns: 1fr;
         max-width: 100%;
-    } 
+    }
+    
+    video {
+        max-width: 100%;
+        min-width: 100%;
+    }
 }
