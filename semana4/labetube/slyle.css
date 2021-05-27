@@ -4,98 +4,102 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
-    min-height: 100vh;
-    display: grid;
-    grid-template-rows: 60px 1fr 60px;
-}
 
-header {
-    display: flex;
+    /* Header */
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
     position: fixed;
     top: 0;
     width: 100%;
-    text-align: center;
-    background-color: orangered;
     justify-content: space-between;
-    align-items: center;
-    padding: 15px;
 }
 
-main {
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li input {
+  margin-top: 14px;
+  margin-left: 10%;
+}
+
+.home {
+    background-color: #C41D42;
+}
+
+    /* Grid Home */
+
+.grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    row-gap: 22px;
-    column-gap: 22px;
-    justify-content: space-between;
-    margin: 20px;
+    /* grid-template-rows: 1fr 1fr 1fr 1fr; */
+    grid-gap: 36px;
+    padding: 48px;
+    margin-top: 96px;
+    border-left: 1px solid #C41D42;
+    border-right: #333;
+}
+
+.grid-container > div {
+    background-color: whitesmoke;
+    font-size: 12px;
+    text-align: center;
+}
+
+div a {
+    text-decoration: none;
 }
 
 img {
-    height: 225px;
-    width: 325px;
-}
-
-.card-videos {
-    border: 1px solid black;
-    align-items: center;
-    text-align: center;
-    height: 250px;
-    width: 325px;
-    padding-bottom: 5px;
-}
-
-footer {
     display: block;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    text-align: center;
-    background-color: orangered;
-    justify-content: center;
-    padding: 10px;
-}
-
-.box-video {
-
-}
-
-.box-video video {
-    width: 720px; 
-    height:480px;
+    max-width: 100%;
 }
 
 .video-main {
     display: flex;
     justify-content: center;
+    margin-top: 50px;
+    text-align: center;
 }
 
 
+
+video {
+    display: block;
+    max-width: 720px;
+    min-width: 720px;
+}
+
+.footer {
+    position: fixed;
+    /* left: 0; */
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 12px;
+}
+
+    /* Media Querie */
+
 @media screen and (min-device-width: 320px) and (max-device-width: 480px){/* celulares */
     
-    main {
+    .grid-container {
         grid-template-columns: 1fr;
-        width: 100%; 
-    }
-
-    .box-video video {
-        width: 35%;
-        height: 35%;
-        margin-top: 150px;
-    }
-
-    .video-main .box-video {
-        display: flex;
-        justify-content: center;
-    }
-
-    footer {
-        position: fixed;
-    }
-
-    header {
-        position: fixed;
-        top: 0;
-    }
+        max-width: 100%;
+    } 
 }
