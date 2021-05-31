@@ -43,14 +43,14 @@ console.log(listaNomes)
 
 //c.
 
-// const listaPoodle = pets.filter((desconto) => {
-//     return desconto.raca === "Poodle"
-// }).map((desconto) => {
-//     return desconto.nome
-// })
+const listaPoodle = pets.filter((desconto) => {
+    return desconto.raca === "Poodle"
+}).map((desconto) => {
+    return desconto.nome
+})
 
-// console.log(`Parabéns ${listaPoodle[0]} você ganhou um desconto de 10%!`)
-// console.log(`Parabéns ${listaPoodle[1]} você ganhou um desconto de 10%!`)
+console.log(`Parabéns ${listaPoodle[0]} você ganhou um desconto de 10%!`)
+console.log(`Parabéns ${listaPoodle[1]} você ganhou um desconto de 10%!`)
 
 //2.
 

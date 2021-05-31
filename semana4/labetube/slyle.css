@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+    /* Header */
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li input {
+  margin-top: 14px;
+  margin-left: 10%;
+}
+
+.home {
+    background-color: #C41D42;
+}
+
+    /* Grid Home */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr 1fr 1fr; */
+    grid-gap: 36px;
+    padding: 48px;
+    margin-top: 96px;
+    border-left: 1px solid #C41D42;
+    border-right: #333;
+}
+
+.grid-container > div {
+    background-color: whitesmoke;
+    font-size: 12px;
+    text-align: center;
+}
+
+div a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.video-main {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    text-align: center;
+}
+
+
+
+video {
+    display: block;
+    max-width: 720px;
+    min-width: 720px;
+}
+
+.footer {
+    position: fixed;
+    /* left: 0; */
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 12px;
+}
+
+    /* Media Querie */
+
+@media screen and (min-device-width: 320px) and (max-device-width: 480px){/* celulares */
+    
+    .grid-container {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+    }
+    
+    video {
+        max-width: 100%;
+        min-width: 100%;
+    }
+}
