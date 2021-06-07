@@ -7,7 +7,7 @@ align-items: center;
 flex-direction: column;
 `
 
-export const PrimeiraEtapa = (props) => {
+export const PrimeiraEtapa = () => {
     
     return (
         <BoxForm>
