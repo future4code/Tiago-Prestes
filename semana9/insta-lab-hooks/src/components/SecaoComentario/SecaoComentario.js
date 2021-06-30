@@ -23,12 +23,11 @@ const SecaoComentario = (props) => {
 	return (
 		<CommentContainer>
 			<InputComment
-				className={'input-comentario'}
 				placeholder={'Comentário'}
 				value={inputValue}
 				onChange={onChangeComentario}
 			/>
-			<button onClick={() => { props.enviarComentario({inputValue}) }} >Enviar</button>
+			<button onClick={() => { props.enviarComentario(inputValue) }} >Enviar</button>
 		</CommentContainer>
 	)
 }
