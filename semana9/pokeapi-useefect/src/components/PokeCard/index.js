@@ -8,15 +8,19 @@ const PokeCard = (props) => {
     // const [peso, setPeso] = useState("")
 
     useEffect(() => {
-        axios
-            .get(`https://pokeapi.co/api/v2/pokemon/`)
-            .then((response) => {
-                setPokemon(response.data)
-            })
-            .catch((err) => {
-                console.log(err)
-            })
+      renderizaPokemon(props.pokemon)
     })
+
+    const renderizaPokemon = pokeName => {
+      axios
+          .get(`https://pokeapi.co/api/v2/pokemon/${pokeName}`)
+          .then((response) => {
+              setPokemon(response.data)
+          })
+          .catch((err) => {
+              console.log(err)
+          })
+    }
 
     return (
         <div>
