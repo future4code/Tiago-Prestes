@@ -1,9 +1,6 @@
-import axios from "axios"
 import React from "react"
 
 export const BotaoResetar = (props) => {
-
-
 
     return (
         <div>

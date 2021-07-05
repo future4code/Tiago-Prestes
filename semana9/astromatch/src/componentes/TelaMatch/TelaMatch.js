@@ -1,6 +1,7 @@
 import axios from "axios"
 import React, { useEffect, useState } from "react"
 import { BotaoResetar } from "../BotaoResetar/BotaoResetar"
+import { ContainerPerfil } from "./styled"
 
 export const TelaMatch = () => {
     const [perfilMatch, setPerfilMatch] = useState([])
@@ -36,7 +37,10 @@ export const TelaMatch = () => {
         <div>
             {perfilMatch.map(({name, id, photo, bio, age}) => { //Desestrutar: Chamo tudo quero receber da api.
                 return (
-                    <p>{name}</p>
+                    <ContainerPerfil>
+                        <img src={photo} alt={name}/>
+                        <p>{name}</p>
+                    </ContainerPerfil>
                 )
             })}
             <BotaoResetar resetaMatches={resetaMatches} />

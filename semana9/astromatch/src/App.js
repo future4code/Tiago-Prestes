@@ -1,7 +1,7 @@
 import './App.css';
 import { CardPerfil } from './componentes/CardPerfil/CardPerfil';
 import { TelaMatch } from './componentes/TelaMatch/TelaMatch';
-import { BotaoResetar } from './componentes/BotaoResetar/BotaoResetar';
+import { BotaoVerMatches } from './componentes/BotaoVerMatches/BotaoVerMatches';
 import React, { useState } from "react";
 
 
@@ -15,9 +15,14 @@ function App() {
   })
 
   return (
-    <div className="App">
-     {tela ? <CardPerfil /> : <TelaMatch />}
-     <button onClick={alterarNoclick}>{tela ? "Ver meus matchs" : "Voltar"}</button>
+    <div class="App">
+      {tela ? <CardPerfil /> : <TelaMatch />}
+      <BotaoVerMatches
+        alterarNoclick={alterarNoclick}
+        tela={tela ? "Ver meus matchs" : "Voltar"}
+      ></BotaoVerMatches>
+      
+    
     </div>
   );
 }

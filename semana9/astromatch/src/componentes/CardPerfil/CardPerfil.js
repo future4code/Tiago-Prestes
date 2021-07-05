@@ -1,6 +1,7 @@
 import axios from "axios"
 import React, { useEffect, useState } from "react"
 import { BotaoResetar } from "../BotaoResetar/BotaoResetar"
+import { MainContainer, ButtonsContainer, ContainerText } from "./styled"
 
 export const CardPerfil = () => {
     const [perfilLista, setPerfilLista] = useState({})
@@ -57,15 +58,18 @@ const resetaMatches = () => {
 }
 
     return (
-        <div>
+        <MainContainer>
             <h1>astromatch</h1>
             <img src={perfilLista.photo} alt={perfilLista.name}/>
-            <p>{perfilLista.name}</p>
+            <ContainerText>
+            <p><strong>{perfilLista.name}</strong></p>
             <p>{perfilLista.bio}</p>
             <p>{perfilLista.age}</p>
+            </ContainerText>
+            <ButtonsContainer>
             <button onClick={deuMatch}>Match</button>
             <button onClick={rejeitaMatch}>Rejeita</button>
-            <BotaoResetar resetaMatches={resetaMatches} />
-        </div>
+            </ButtonsContainer>   
+        </MainContainer>
     )
 }
