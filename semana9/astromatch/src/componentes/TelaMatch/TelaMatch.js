@@ -15,21 +15,14 @@ export const TelaMatch = () => {
             .get('https://us-central1-missao-newton.cloudfunctions.net/astroMatch/tiago/matches')
             .then((res) => {
                 setPerfilMatch(res.data.matches)
-                console.log(res.data.matches)
-            })
-            .catch((err) => {
-                console.log(err)
             })
     }
 
     const resetaMatches = () => {
         axios
             .put('https://us-central1-missao-newton.cloudfunctions.net/astroMatch/tiago/clear')
-            .then((res) => {
+            .then(() => {
                 renderizaMatches() 
-            })
-            .catch((err) => {
-                console.log(err)
             })
     }
 

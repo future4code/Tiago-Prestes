@@ -21,8 +21,6 @@ function App() {
         alterarNoclick={alterarNoclick}
         tela={tela ? "Ver meus matchs" : "Voltar"}
       ></BotaoVerMatches>
-      
-    
     </div>
   );
 }
