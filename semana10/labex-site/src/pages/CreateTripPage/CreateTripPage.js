@@ -1,10 +1,10 @@
 import React from "react"
 
-export const ListaViagens = () => {
+export const CreateTripPage = () => {
 
     return (
         <div>
-            Lista viagens
+            Create Trip Page
         </div>
     )
 }

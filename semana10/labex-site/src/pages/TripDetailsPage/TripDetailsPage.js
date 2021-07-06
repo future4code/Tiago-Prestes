@@ -1,10 +1,10 @@
 import React from "react"
 
-export const AreaPrivada = () => {
+export const TripDetailsPage = () => {
 
     return (
         <div>
-            Area Privada
+            Trip Details Page
         </div>
     )
 }
