@@ -1,23 +1,24 @@
-import React, { useState } from "react"
+import React from 'react';
+import { useHistory } from "react-router-dom";
 
 export const HomePage = () => {
-    const [selecionaTela, setSelecionaTela] = useState('')
+    const history = useHistory()
 
 
-    const irParaAreaPrivada = () => {
-        setSelecionaTela('Area-Privada')
+    const goToPrivateArea = () => {
+        history.push("/login")
     }
 
-    const irParaListaViagens = () => {
-        setSelecionaTela('Lista-viagens')
+    const goToTrips = () => {
+        history.push("/trips/list")
     }
 
 
     return (
         <div>
-            <p>Home Page</p>
-            <button onClick={irParaAreaPrivada}>Pagina Adim</button>
-            <button onClick={irParaListaViagens}>Lista Viagens</button>
+            <p>LabeX</p>
+            <button onClick={goToPrivateArea}>Área de Admin</button>
+            <button onClick={goToTrips}>Ver Viagens</button>
         </div>
     )
 }
