@@ -17,6 +17,7 @@ export const ListTripsPage = () => {
             .get('https://us-central1-labenu-apis.cloudfunctions.net/labeX/tiago-prestes-molina/trips')
             .then((res) => {
                 setTripDetail(res.data.trips)
+                console.log(res.data.trips)
             })
             .catch((err) => {
                 console.log(err)
@@ -27,8 +28,14 @@ export const ListTripsPage = () => {
         history.goBack()
     }
 
+    const goToSignUp = () => {
+        history.push("/trips/application")
+    }
+
     return (
         <div>
+            <button onClick={goBackHome}>Voltar</button>
+            <button onClick={goToSignUp}>Inscrever-se</button>
             {tripDetail.map(({id, name, description, planet, durationInDays, date}) => {
                 return (
                     <MainContainer key={id}> 
@@ -41,7 +48,6 @@ export const ListTripsPage = () => {
                    
                 )
             })}
-            <button onClick={goBackHome}>Voltar</button>
         </div>
     )
 }
