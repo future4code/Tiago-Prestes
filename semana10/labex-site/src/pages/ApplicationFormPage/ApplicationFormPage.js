@@ -21,7 +21,7 @@ export const ApplicationFormPage = () => {
         //     country:
         // }
         axios
-            .post('https://us-central1-labenu-apis.cloudfunctions.net/labeX/:aluno/trips/:id/apply')
+            .post('https://us-central1-labenu-apis.cloudfunctions.net/labeX/tiago-prestes-molina/trips/:id/apply')
             .then((res) => {
                 setInfoProfile(res)
                 console.log(res)
