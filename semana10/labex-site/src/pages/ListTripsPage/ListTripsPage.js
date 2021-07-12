@@ -24,7 +24,7 @@ export const ListTripsPage = () => {
             })
     }
 
-    const goBackHome = () => {
+    const goBackPage = () => {
         history.goBack()
     }
 
@@ -34,7 +34,7 @@ export const ListTripsPage = () => {
 
     return (
         <div>
-            <button onClick={goBackHome}>Voltar</button>
+            <button onClick={goBackPage}>Voltar</button>
             <button onClick={goToSignUp}>Inscrever-se</button>
             {tripDetail.map(({id, name, description, planet, durationInDays, date}) => {
                 return (
