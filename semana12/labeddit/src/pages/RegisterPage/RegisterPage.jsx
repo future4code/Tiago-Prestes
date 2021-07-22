@@ -1,9 +1,15 @@
 import React from "react"
+import { MainContainer } from "./styled"
 
-export const RegisterPage = () => {
+const RegisterPage = () => {
     return (
-        <div>
-            RegisterPage
-        </div>
+        <MainContainer>
+            <input type="text" placeholder="Nome de usuário" />
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Senha" />
+            <button>Cadastrar</button>
+        </MainContainer>
     )
 }
+
+export default RegisterPage

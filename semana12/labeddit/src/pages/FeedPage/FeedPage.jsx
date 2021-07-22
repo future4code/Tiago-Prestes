@@ -1,9 +1,29 @@
 import React from "react"
+import { MainContainer, PostContainer, WriterBox } from "./styled"
+import PostCard from "../../components/PostCard"
 
-export const FeedPage = () => {
+const FeedPage = () => {
     return (
-        <div>
-            FeedPage
-        </div>
+        <MainContainer>
+            <WriterBox>
+                <input type="text" placeholder="Escreve seu comentário" />
+                <button>Postar</button>
+            </WriterBox>
+            <PostContainer>
+                <PostCard />
+                <PostCard />
+                <PostCard />
+                <PostCard />
+                <PostCard />
+                <PostCard />
+                <PostCard />
+                <PostCard />
+                <PostCard />
+            </PostContainer>
+        </MainContainer>
+
+
     )
 }
+
+export default FeedPage
