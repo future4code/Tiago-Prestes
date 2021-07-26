@@ -3,9 +3,8 @@ import styled from "styled-components";
 const MainContainer = styled.div`
     display: flex;
     justify-content: center;
-    width: 100vw;
-    height: 100vh;
-    background: #27292D;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
         p, h1, h2, h3, h4 {
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
@@ -15,38 +14,60 @@ const PageContainer = styled.div`
     display: flex;
     background: white;
     width: 760px;
+    min-height: 500px;
     margin: 16px 0px 32px 0px;
-    border-radius: 6px;
     flex-direction: column;
     align-items: center;
-    justify-content: initial;
+    /* border-top: 1px solid black; */
+
+    button {
+            margin-top: 8px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            border: none;
+            background: #2AA9E0;
+            border-radius: 8px;
+            
+            :hover {
+                    background: #6fdbff;
+                } 
+        }     
 `
+
 const PostContainer = styled.div`
     margin: 8px 0px 8px 0px;
     max-width: 660px;
-        /* border: 2px solid #313131; */
 
 `
 const TextContainer = styled.div`
-    /* border: 2px solid #313131; */
     padding: 12px;
+    border-bottom: 1px solid grey;
+    border-top: 1px solid grey;
+
 `
 const WriteBox = styled.div`
     display: flex;
     flex-direction: column;
     margin: 8px 0px 8px 0px;
     align-items: center;
-    /* border: 1px solid red; */
     padding: 12px;
+    border-top: 1px solid black;
         input {
             width: 640px;
             min-height: 66px; 
             padding: 12px;
             text-align: left;
-            border: 2px solid #8096A4;
-            border-radius: 6px;
+            border: 1px solid black;
         }
-        
+        button {
+            margin-top: 8px;
+            cursor: pointer;
+            border: none;
+            background: #2AA9E0;
+            :hover {
+                    background: #6fdbff;
+                }   
+        }   
 `
 
 const CommentSection = styled.div`
@@ -56,15 +77,13 @@ const CommentSection = styled.div`
     align-items: center;
         p {
             margin: 0;
-            width: 640px;
+            width: 320px;
             height: 66px;
-            min-height: 90px; 
+            min-height: 15px; 
             padding: 12px;
             text-align: left;
-            border: 2px dashed #8096A4;
-            border-radius: 6px;
+            border-bottom: 1px dashed black;
         }
-    /* border: 1px solid pink; */
         
 `
 

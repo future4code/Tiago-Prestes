@@ -1,13 +1,52 @@
 import React from "react"
-import { MainContainer } from "./styled"
+import { MainContainer, FormContainer } from "./styled"
+import { useHistory } from "react-router-dom"
+import { goToLogin } from "../../routes/coordinator"
+import useForm from "../../hooks/useForm"
+import useUnprotectedpage from "../../hooks/useUnprotectedPage"
+import { register } from "../../services/users"
 
 const RegisterPage = () => {
+    useUnprotectedpage()
+    const history = useHistory()
+    const [form, onChange, clear] = useForm({ username: "", email: "", password: "" })
+
+    const onSubmitForm = (event) => {
+        event.preventDefault()
+        register(form, clear, history)
+        console.log("Use", form)
+    }
+
     return (
         <MainContainer>
-            <input type="text" placeholder="Nome de usuário" />
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Senha" />
-            <button>Cadastrar</button>
+            <FormContainer onSubmit={onSubmitForm}>
+                <input
+                    type="username"
+                    placeholder="username"
+                    name="username"
+                    value={form.username}
+                    onChange={onChange}
+                    required
+                />
+                <input
+                    type="email"
+                    placeholder="email"
+                    name="email"
+                    value={form.email}
+                    onChange={onChange}
+                    required
+                />
+                <input
+                    type="password"
+                    placeholder="password"
+                    name="password"
+                    value={form.password}
+                    onChange={onChange}
+                    required
+                />
+                <button type="submit">Cadastrar</button>
+            </FormContainer>
+            <button onClick={() => goToLogin(history)}>Voltar para login</button>
         </MainContainer>
     )
 }

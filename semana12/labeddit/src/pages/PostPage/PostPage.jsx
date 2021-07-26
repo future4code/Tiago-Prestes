@@ -1,4 +1,9 @@
 import React from "react"
+import { useHistory, useParams } from "react-router"
+import useProtectedPage from "../../hooks/useProtectedPage"
+import useRequestData from "../../hooks/useRequestData"
+import { goToFeedPage } from "../../routes/coordinator"
+import { BASE_URL } from "../../constants/urls"
 import {
     MainContainer,
     WriteBox,
@@ -8,31 +13,50 @@ import {
     CommentSection
 } from "./styled"
 
-const PostPage = () => {
+const PostPage = (props) => {
+    useProtectedPage()
+    const history = useHistory()
+    const params = useParams()
+    const comments = useRequestData([], `${BASE_URL}/posts/${params.id}/comments`)
+    const feedPosts = useRequestData([], `${BASE_URL}/posts`)
+    console.log(comments)
+
+
+    const listComments = comments.map((comment) => {
+        return <CommentSection>
+            <h4>Comentario de: {comment.username}</h4>
+            <p>{comment.body}</p>
+        </CommentSection>
+    })
+
+    const feedCards = feedPosts.filter((post) => {
+        return post.id === params.id
+    }).map((post) => {
+        return (
+            <PostContainer>
+                <h2>Título: {post.title}</h2>
+                <TextContainer>
+                    <p>{post.body}</p>
+                </TextContainer>
+                <h4>Usuário: {post.username} </h4>
+                <p>Votos: {post.voteSum}</p>
+            </PostContainer>
+        )
+    })
+
+
     return (
         <MainContainer>
             <PageContainer>
-                <h2>Title</h2>
-                <PostContainer>
-                    <h3>Nome de usuário</h3>
-                    <TextContainer>
-                        <p>Texto do post:
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora numquam harum suscipit iusto eius similique aperiam, nobis, ab perferendis natus rem eligendi, inventore voluptates ad repudiandae quos magni ratione dolorem!
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae eligendi nemo, amet porro corporis assumenda illo esse
-                        </p>
-                    </TextContainer>
-                    <p>Votos: 1</p>
-                </PostContainer>
+                <button onClick={() => goToFeedPage(history)}>Voltar para o Feed</button>
+                {feedCards}
                 <WriteBox>
                     <input type="text" placeholder="Escreve seu comentário" />
                     <button>Enviar</button>
                 </WriteBox>
-                <CommentSection>
-                    <h4>Nome de usuário</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora numquam harum suscipit iusto eius similique aperiam, nobis, ab perferendis natus rem eligendi, inventore voluptates ad repudiandae quos magni ratione dolorem!
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </CommentSection>
+                {listComments}
             </PageContainer>
+
         </MainContainer>
     )
 }

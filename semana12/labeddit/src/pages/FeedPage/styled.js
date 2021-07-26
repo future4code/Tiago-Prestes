@@ -2,31 +2,41 @@ import styled from "styled-components";
 
 const MainContainer = styled.div`
 display: flex;
-flex-wrap: wrap;
+flex-direction: column;
 justify-content: center;
 `
 
 const PostContainer = styled.div`
 display: flex;
-flex-wrap: wrap;
+flex-direction: column;
+align-items: center;
 padding: 14px;
 justify-content: center;
+border: 1px solid black;
 `
 
 const WriterBox = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 8px 0px 8px 0px;
     padding: 12px;
         input {
-            width: 400px;
-            min-height: 66px; 
+            width: 300px;
             padding: 12px;
             text-align: left;
-            border: 2px solid #8096A4;
-            border-radius: 6px;
+            border: 1px solid black;
         }
         button {
+            border-radius: 8px;
+            margin-top: 8px;
             width: 80px;
-            height: 92px;
+            cursor: pointer;
+            border: none;
+            background: #2AA9E0;
+            :hover {
+                    background: #6fdbff;
+                }
         }
 `
 export {
