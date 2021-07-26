@@ -15,7 +15,7 @@ justify-content: center;
 border: 1px solid black;
 `
 
-const WriterBox = styled.div`
+const WriterBox = styled.form`
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -22,6 +22,8 @@ const FeedPage = () => {
     const onSubmitForm = (event) => {
         event.preventDefault()
         createPost(form, clear)
+        console.log(form)
+        console.log("Clicado")
     }
 
     const feedCards = feedPosts.map((post) => {
@@ -50,7 +52,7 @@ const FeedPage = () => {
                 />
                 <input
                     type="body"
-                    name={"body"}
+                    name="body"
                     value={form.body}
                     onChange={onChange}
                     placeholder="Escreve seu comentário"
