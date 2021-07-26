@@ -22,7 +22,6 @@ const FeedPage = () => {
     const onSubmitForm = (event) => {
         event.preventDefault()
         createPost(form, clear)
-        console.log("Console", form)
     }
 
     const feedCards = feedPosts.map((post) => {

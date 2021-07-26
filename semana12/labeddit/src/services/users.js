@@ -6,7 +6,6 @@ export const login = (body, clear, history) => {
     axios.post(`${BASE_URL}/users/login`, body)
         .then((res) => {
             localStorage.setItem("token", res.data.token)
-            console.log(res)
             clear()
             goToFeedPage(history)
         })
@@ -20,10 +19,8 @@ export const register = (body, clear, history) => {
     axios.post(`${BASE_URL}/users/signup`, body)
         .then((res) => {
             localStorage.setItem("token", res.data.token)
-            console.log(res)
             clear()
             goToFeedPage(history)
-
         })
         .catch((err) => {
             console.log(err)
@@ -40,7 +37,6 @@ export const createPost = (body, clear) => {
     })
         .then((res) => {
             clear()
-            console.log("Post resposta:", res)
         })
         .catch((err) => {
             console.log(err)

@@ -19,7 +19,6 @@ const PostPage = (props) => {
     const params = useParams()
     const comments = useRequestData([], `${BASE_URL}/posts/${params.id}/comments`)
     const feedPosts = useRequestData([], `${BASE_URL}/posts`)
-    console.log(comments)
 
 
     const listComments = comments.map((comment) => {

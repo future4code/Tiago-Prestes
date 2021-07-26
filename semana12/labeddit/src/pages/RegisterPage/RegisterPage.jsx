@@ -14,7 +14,6 @@ const RegisterPage = () => {
     const onSubmitForm = (event) => {
         event.preventDefault()
         register(form, clear, history)
-        console.log("Use", form)
     }
 
     return (
