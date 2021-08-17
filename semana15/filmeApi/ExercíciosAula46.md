@@ -1,58 +1,74 @@
 ### Exercício 1
-a) Float: Tudo que não é número inteiro
 
-b)
- SHOW TABLES: mostra as minhas tabelas
- SHOW DATABASES: mostra minhas informações de usuário
+a) Apaga a coluna de salario.
 
-c) DESCRIBE: Mostra a descrição de entrada e quais seus tipos.
+b) Muda o nome de gender para sex e deixa com 6 caracteres
+
+c) Muda a quantidade de caracteres para (255)
+
+d) ALTER TABLE Actor CHANGE gender gender VARCHAR(100);
 
 ### Exercício 2
-a) Feito
 
-b) Entrada "002" duplicada pela chave 'primária'
+a) 
+UPDATE Actor 
+SET name = "Moacyr Franco", birth_date = "1936-10-05" WHERE id = "003"
 
-c) A contagem de colunas não corresponde à contagem de valores na linha 1
+b) 
+UPDATE Actor
+SET name = "JULIANA PAES"
+WHERE id = "005" 
 
-d) Campo de 'nome' não tem valor padrão
+c) 
+UPDATE Actor 
+SET name = "Francisco Januario",
+birth_date = "1910-10-05",
+salary = "1,99",
+gender = "male"
+WHERE id = "005",
 
-e) Valor de data incorreto na linha 1
+d) Ele diz que foi feito o update. Ainda não sei dizer o motivo.
 
 ### Exercício 3
-a) SELECT * from Actor WHERE gender = "female";
 
-b) SELECT salary FROM Actor WHERE name = "Tony Ramos";
+a)
+DELETE FROM Actor WHERE name = "Fernanda Montenegro"
 
-c) SELECT * FROM Actor WHERE gender = "tuto"; Não retorna nada, pois não tem nada com o genero invalid.
-
-d) SELECT id, name , salary FROM Actor WHERE salary <= "500000" ;
-
-e) SELECT id, name from Actor WHERE id = "002";
+b) 
+DELETE FROM Actor
+WHERE
+gender = "male" AND
+salary > 1000000
 
 ### Exercício 4
-a) Seleciona tudo, de Actor com o nome que comece com A até J e salário menor de 300000
 
-b)  SELECT * FROM Actor
-    WHERE (name NOT LIKE "A%") AND salary < 300000;
+a) SELECT MAX(salary) FROM Actor;
 
-C) SELECT * FROM Actor WHERE (name LIKE "G"  OR  name LIKE "g" ) AND salary < 300000;
+b) SELECT MIN(salary) FROM Actor WHERE gender = "female";
 
-d) SELECT * FROM Actor WHERE name NOT LIKE "%G%,"  AND  name  NOT LIKE "%g%"  AND salary > 300000;
+c) SELECT COUNT(*) FROM Actor WHERE gender = "female";
+
+d)SELECT COUNT(salary) FROM Actor;
 
 ### Exercício 5
 
-a) Pode conter uma string de no máximo 65.535bytes
+a) Ele separou os generos em dois grupos e somou a quantidade de cada grupo.
 
 b) 
-INSERT INTO Movies
-(titulo, sinopse, data_lacamento, avaliacao) 
-VALUES 
-('Batman: O Cavaleiro das Trevas', 'Com a ajuda de Jim Gordon e Harvey Dent, Batman tem mantido a ordem na cidade de Gotham. Mas um jovem e anárquico criminoso conhecido como Coringa ganha força e decide instaurar um verdadeiro caos na cidade. O justiceiro será testado psicologicamente e fisicamente como nunca fora antes em um confronto bastante pessoal. Cabe a Batman encontrar uma maneira de deter o sádico vilão antes que mais vidas sejam perdidas.','2008-07-18', 10);
+SELECT id, name FROM Actor
+ORDER BY name DESC;
 
-CREATE TABLE Movies (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-    titulo VARCHAR(255) NOT NULL,
-    sinopse TEXT NOT NULL,
-    data_lancamento VARCHAR(255) NOT NULL,
-    avaliacao FLOAT NOT NULL
-);
+c)
+SELECT * FROM Actor
+ORDER BY salary;
+
+d) 
+SELECT * FROM Actor
+ORDER BY salary DESC
+LIMIT 3;
+
+e)
+SELECT AVG(salary), gender FROM Actor
+GROUP BY gender;
+
+### Exercícios 6
