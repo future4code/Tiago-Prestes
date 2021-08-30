@@ -16,6 +16,14 @@ const searchActor = async (name: string): Promise<any> => {
     return result[0][0]
   }
 
+  searchActor("Tony Ramos")
+	.then(result => {
+		console.log(result)
+	})
+	.catch(err => {
+		console.log(err)
+	});
+
 app.get("/actors/:id", async (req: Request, res: Response) => {
     try {
         const name = req.params.name
