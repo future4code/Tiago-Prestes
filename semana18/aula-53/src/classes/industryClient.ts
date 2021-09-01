@@ -1,17 +1,17 @@
 import { Client } from "../interfaces/client";
-import { Residence } from "./residence";
+import { Industry } from "./industry";
 
-export class ResidentialClient extends Residence implements Client {
+export class ResidentialClient extends Industry implements Client {
 
     constructor(
-        ResidentialClient: number,
+        machinesQuantity: number,
         cep: string,
         private cpf: string,
         public name: string,
         public registrationNumber: number,
         public consumedEnergy: number
     ) {
-        super(ResidentialClient, cep)
+        super(machinesQuantity, cep)
         this.cpf = cpf
     }
 
@@ -20,6 +20,6 @@ export class ResidentialClient extends Residence implements Client {
     }
 
     calculateBill(): number{
-        return this.consumedEnergy * 0.75
+        return this.consumedEnergy * 0.45 + this.machinesQuantity * 100
     }
 }

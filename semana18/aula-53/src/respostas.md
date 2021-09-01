@@ -25,3 +25,8 @@ b. Para criar uma instância de uma classe abstrata precisamos declarar uma clas
 2.
 a.Não é possível gerar uma instancia de uma classe abstrata.
 
+3.index.ts
+4.index.ts
+5.index.ts
+6.index.ts
+

@@ -53,10 +53,13 @@ import { ComercialClient } from "./classes/comercialClient";
 // const machine = new Industry (2, "0076500")
 // console.log(machine.getCep(), machine.getMachinesQuantity())
 
-const testeFilhas = new ComercialClient ("80085", 10, "cpnjotis")
-console.log(
-    testeFilhas.getCep(),
-    testeFilhas.getCnpj(),
-    testeFilhas.calculateBill(),
-    testeFilhas.getFloorsQuantity()
-    )
+const testeClients = new ComercialClient( //residentialClient, industryClient
+    5,
+    "8008",
+    "cnpjotiscpf",
+    "Nomezim",
+    7,
+    100
+)
+console.log(testeClients, testeClients.calculateBill())
+
