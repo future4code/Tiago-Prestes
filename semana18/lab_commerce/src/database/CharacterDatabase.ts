@@ -1,4 +1,4 @@
-import connection from "../connection"
+import connection from "./connection"
 import { Character } from "../entities/Character"
 
 export class CharacterDatabase {
