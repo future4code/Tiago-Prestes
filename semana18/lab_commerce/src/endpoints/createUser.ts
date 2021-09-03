@@ -22,4 +22,3 @@ export default async function createUser(
        res.status(500).end()
     }
  }
- 

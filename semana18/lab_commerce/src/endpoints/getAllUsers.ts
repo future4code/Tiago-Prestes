@@ -1,7 +1,7 @@
 import { Request, Response } from "express"
 import { UserDatabase } from "../database/UserDatabase"
 import { User } from "../entities/User"
-import { UserDb } from "../types"
+
 
 
 export default async function getAllUser(
@@ -12,7 +12,7 @@ export default async function getAllUser(
     try {
 
         const userDatabase = new UserDatabase()
-        const userDb: UserDb[] = await userDatabase.getAll()
+        const userDb = await userDatabase.getAll()
 
         const user = userDb.map(user => {
             return new User(

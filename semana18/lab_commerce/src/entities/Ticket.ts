@@ -7,10 +7,10 @@ export class Ticket extends Products {
     name: string,
     description: string,
     price: number,
-    origin: string,
-    destination: string
+    public origin: string,
+    public destination: string
     ) {
-        super(id, name, description, price, origin, destination);
+        super(id, name, description, price);
     }
     
 
