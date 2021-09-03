@@ -1,19 +1,18 @@
 export class User {
-    private id: string
-    private name: string
-    private description: string    
-    private price: number
-
+       public id: string
+       public name: string
+       public email: string
+       public age: number
     constructor(
-        charId: string,
-        charName: string,
-        charDescription: string,
-        charPrice: number
+        id: string,
+        name: string,
+        email: string,
+        age: number
     ) {
-        this.id = charId
-        this.name = charName
-        this.description = charDescription
-        this.price = charPrice
+        this.id = id
+        this.name = name
+        this.email = email
+        this.age = age
     }
 
     getId() {
@@ -24,12 +23,12 @@ export class User {
         return this.name
     }
 
-    getDescription() {
-        return this.description
+    getEmail() {
+        return this.email
     }
 
-    getPrice() {
-        return this.price
+    getAge() {
+        return this.age
     }
 
 }

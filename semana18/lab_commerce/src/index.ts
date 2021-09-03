@@ -1,8 +1,7 @@
 import app from "./app"
-import createCharacter from "./endpoints/createCharacter"
-import deleteCharacter from "./endpoints/deleteCharacter"
-import getAllCharacters from "./endpoints/getAllCharacters"
+import createUser from "./endpoints/createUser"
+import getAllUser from "./endpoints/getAllUsers"
 
-app.get("/character", getAllCharacters)
-app.post("/character", createCharacter)
-app.delete("/character/:id", deleteCharacter)
+app.post("/user", createUser)
+app.get("/user", getAllUser)
+
