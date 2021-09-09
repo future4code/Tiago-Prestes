@@ -34,10 +34,10 @@ class UserAccount {
    private value: number;
    private description: string;
    
-   constructor(date: string, value: number, description: string) {
-     this.date = date;
-     this.value = value;
-     this.description = description
+   constructor(newDate: string, newValue: number, newDescription: string) {
+     this.date = newDate;
+     this.value = newValue;
+     this.description = newDescription;
    }
  } 
 
