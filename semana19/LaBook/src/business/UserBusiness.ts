@@ -6,7 +6,7 @@ import { IdGenerator } from "../services/idGenerator";
 
 export class UserBusiness {
 
-   async signup(input: SignupInputDTO) {
+   async signup(input: SignupInputDTO): Promise<string> {
 
       try {
          if (!input.name || !input.email || !input.password) {
