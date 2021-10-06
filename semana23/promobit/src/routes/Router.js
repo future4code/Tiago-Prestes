@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom"
 import PopularMovies from "../pages/PopularMovies/PopularMovies";
-import MovieDeTails from "../pages/MovieDetails/MovieDetails"
 import MovieDetails from "../pages/MovieDetails/MovieDetails";
 
 
