@@ -8,10 +8,10 @@ const CardVideo = ({ video }) => {
 
     return (
         <VideoContainer>
-            <img src={video.snippet.thumbnails.medium.url} alt={"imagem"} />
+            <img src={video.snippet.thumbnails.medium.url} alt={"imagem video"} />
             <TextContainer>
+                <h4>{video.snippet.channelTitle}</h4>
                 <p>{video.snippet.title}</p>
-                <p>{video.snippet.channelTitle}</p>
             </TextContainer>
             <button onClick={() => goToVideoPage(history, video.id.videoId)}>Ir para video</button>
         </VideoContainer>
