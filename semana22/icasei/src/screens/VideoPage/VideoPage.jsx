@@ -21,7 +21,6 @@ const VideoPage = () => {
             .get(`${BASE_URL}videos?id=${name}&part=snippet,statistics&${token}`)
             .then((res) => {
                 setCurrentVideo(res.data.items)
-                console.log("Video atual", res.data.items)
             })
             .catch((err) => {
                 console.log(err)

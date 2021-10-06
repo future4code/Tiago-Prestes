@@ -18,7 +18,6 @@ const GlobalState = (props) => {
             .get(`${BASE_URL}${part}${query}${maxResults}${type}${token}`)
             .then((res) => {
                 setVideoName(res.data.items)
-                console.log(res.data)
             })
             .catch((err) => {
                 console.log(err)
@@ -26,7 +25,6 @@ const GlobalState = (props) => {
     }
 
     const data = { videoName, getVideoName, setKeyword }
-    console.log("keyword", keyword)
 
     return (
         <GlobalStateContext.Provider value={data}>
