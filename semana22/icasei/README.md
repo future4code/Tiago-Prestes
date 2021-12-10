@@ -46,13 +46,13 @@
 
 ## :dart: About ##
 
-Describe your project
+Aplicativo de video, faz busca e renderiza videos do youtube.
 
 ## :sparkles: Features ##
 
-:heavy_check_mark: Feature 1;\
-:heavy_check_mark: Feature 2;\
-:heavy_check_mark: Feature 3;
+:heavy_check_mark: Feature 1;\ Consumo de API pública.
+:heavy_check_mark: Feature 2;\ Busca de videos por nome.
+:heavy_check_mark: Feature 3;\ Renderização de videos.
 
 ## :rocket: Technologies ##
 
