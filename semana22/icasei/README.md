@@ -50,9 +50,9 @@ Aplicativo de video, faz busca e renderiza videos do youtube.
 
 ## :sparkles: Features ##
 
-:heavy_check_mark: Feature 1;\ Consumo de API pública.
-:heavy_check_mark: Feature 2;\ Busca de videos por nome.
-:heavy_check_mark: Feature 3;\ Renderização de videos.
+:heavy_check_mark: Feature 1; Consumo de API pública.
+:heavy_check_mark: Feature 2; Busca de videos por nome.
+:heavy_check_mark: Feature 3; Renderização de videos.
 
 ## :rocket: Technologies ##
 
@@ -61,8 +61,7 @@ The following tools were used in this project:
 - [Expo](https://expo.io/)
 - [Node.js](https://nodejs.org/en/)
 - [React](https://pt-br.reactjs.org/)
-- [React Native](https://reactnative.dev/)
-- [TypeScript](https://www.typescriptlang.org/)
+- [JavaScript](https://www.javascript.com/)
 
 ## :white_check_mark: Requirements ##
 
